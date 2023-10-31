@@ -1,0 +1,2 @@
+usr/lib/*/libsquashfuse.so.*
+usr/lib/*/libsquashfuse_ll.so.*
