@@ -1,15 +1,59 @@
-Source: template-repository
-Section: unknown
+Source: squashfuse
+Section: utils
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Scarlett Moore <sgmoore@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               libfuse3-dev,
+               liblz4-dev,
+               liblzma-dev,
+               liblzo2-dev,
+               libzstd-dev,
+               pkg-config,
+               zlib1g-dev
+Standards-Version: 4.6.2
+Homepage: https://github.com/vasi/squashfuse
+Vcs-Browser: https://salsa.debian.org/sgmoore/squashfuse
+Vcs-Git: https://salsa.debian.org/sgmoore/squashfuse.git
+Rules-Requires-Root: no
 
-Package: template-repository
+Package: libsquashfuse-dev
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Section: libdevel
+Depends: libsquashfuse0 (= ${binary:Version}), ${misc:Depends}
+Description: Development files for libsquashfuse
+ This lets you mount SquashFS archives in user-space. It supports almost
+ all features of the SquashFS format, yet is still fast and memory-efficient.
+ .
+ SquashFS is an efficiently compressed, read-only storage format.
+ Support for it  has been built into the Linux kernel since 2009. It is
+ very common on Live CDs  and embedded Linux distributions.
+ .
+ This package contains development files for libsquashfuse
+
+Package: libsquashfuse0
+Architecture: any
+Section: libs
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: FUSE filesystem to mount squashfs archives library
+ This lets you mount SquashFS archives in user-space. It supports almost
+ all features of the SquashFS format, yet is still fast and memory-efficient.
+ .
+ SquashFS is an efficiently compressed, read-only storage format.
+ Support for it  has been built into the Linux kernel since 2009. It is
+ very common on Live CDs  and embedded Linux distributions.
+ .
+  This package contains the squashfuse library
+
+Package: squashfuse
+Architecture: any
+Depends: libsquashfuse0 (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: FUSE filesystem to mount squashfs archives
+ This lets you mount SquashFS archives in user-space. It supports almost
+ all features of the SquashFS format, yet is still fast and memory-efficient.
+ .
+ SquashFS is an efficiently compressed, read-only storage format.
+ Support for it  has been built into the Linux kernel since 2009. It is
+ very common on Live CDs  and embedded Linux distributions.

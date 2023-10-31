@@ -1,0 +1,4 @@
+usr/bin/squashfuse
+usr/bin/squashfuse_ll
+usr/share/man/man1/squashfuse.1
+usr/share/man/man1/squashfuse_ll.1

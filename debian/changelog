@@ -1,5 +1,70 @@
-template-repository (1.0-1) unstable; urgency=medium
+squashfuse (0.5.0-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release.
+  * Refresh symbols.
+  * Bump standards to 4.6.2; no changes needed.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Scarlett Moore <sgmoore@debian.org>  Fri, 13 Oct 2023 09:20:11 -0700
+
+squashfuse (0.4.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Refresh install.
+  * Refresh symbols; removed missing internal symbols verified with upstream.
+  * Refresh copyright.
+
+ -- Scarlett Moore <sgmoore@debian.org>  Wed, 27 Sep 2023 05:16:08 -0700
+
+squashfuse (0.1.105-1) unstable; urgency=medium
+
+  [ Scott Moser ]
+  * New upstream release.
+  * Link against libfuse3 rather than libfuse2 (Closes: #1025706).
+  * debian/patches/* - drop patches.
+
+  [ Scarlett Moore ]
+  * Update my email address.
+  * Bump standards to 4.6.1, No changes needed.
+  * Release to unstable.
+
+ -- Scarlett Moore <sgmoore@debian.org>  Sat, 17 Dec 2022 08:28:46 -0700
+
+squashfuse (0.1.103-3) UNRELEASED; urgency=medium
+
+  * Fix "Switch from deprecated <attr/xattr.h> to <sys/xattr.h>"
+    Remove build dependency libattr1 as suggested by
+    the bug report. (Closes: #953937)
+  * Merged lintian fixes from Janitor.
+  * Bump compat to 13.
+  * Add missing Rules-requires-root entry in control.
+  * Update VCS entries to reflect name change.
+  * Refresh my email in copyright.
+  * Refresh patches.
+    - Add not-needed to debian specific patches.
+    - Update my name/email.
+    - Cleanup DEP3 headers.
+
+ -- Scarlett Moore <sgmoore@kde.org>  Thu, 22 Oct 2020 16:06:59 -0700
+
+squashfuse (0.1.103-2) unstable; urgency=medium
+
+  * Fix "Please recompile --with-zstd / libzstd1 for Zstandard support"
+    - Add libzstd-dev build dependency. (Closes: #923883)
+  * Update my email.
+  * Update dep3 patch headers.
+  * Actually add --with-* for all compression types to
+    dh_auto_configure override so the support gets added in.
+  * Fix build warning to run libtool --finish.
+  * Release to unstable.
+  * Remove build files from -dev package.
+  * Bump compat version to 12.
+  * Add VCS entries.
+  * Bump standards version to latest 4.4.0; no changes needed.
+
+ -- Scarlett Moore <sgmoore@kde.org>  Sat, 20 Jul 2019 07:32:47 -0700
+
+squashfuse (0.1.103-1) unstable; urgency=medium
+
+  * Initial packaging. (Closes: #854901)
+
+ -- Scarlett Moore (Lappy2.0 Debian Packaging) <sgclark@kde.org>  Fri, 21 Sep 2018 12:28:02 +0000
