@@ -23,7 +23,6 @@ override_dh_auto_install:
 	rm -f $(CURDIR)/debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libsquashfuse_ll.la
 	rm -f $(CURDIR)/debian/tmp/usr/include/squashfuse/autogen.sh
 	rm -f $(CURDIR)/debian/tmp/usr/include/squashfuse/gen_swap.sh
-	rm -f $(CURDIR)/debian/tmp/usr/include/squashfuse/config.h
 
 override_dh_missing:
 	dh_missing --fail-missing

@@ -1,3 +1,10 @@
+squashfuse (0.5.0-2) unstable; urgency=medium
+
+  * Fix "needed headers (e.g. config.h) are not shipped"
+    Add back header file. (Closes: #1054713)
+
+ -- Scarlett Moore <sgmoore@debian.org>  Thu, 02 Nov 2023 01:42:28 -0700
+
 squashfuse (0.5.0-1) unstable; urgency=medium
 
   * New upstream release.
