@@ -1,4 +1,4 @@
-AC_INIT([squashfuse], [0.5.0], [dave@vasilevsky.ca])
+AC_INIT([squashfuse], [0.5.2], [dave@vasilevsky.ca])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_HEADERS([config.h])
@@ -91,6 +91,7 @@ AS_IF([test "x$sq_tests" = x], [sq_tests=" none"])
 
 AC_SUBST([sq_mksquashfs_compressors])
 AC_CONFIG_FILES([tests/ll-smoke.sh],[chmod +x tests/ll-smoke.sh])
+AC_CONFIG_FILES([tests/ll-smoke-singlethreaded.sh],[chmod +x tests/ll-smoke-singlethreaded.sh])
 AC_CONFIG_FILES([tests/umount-test.sh],[chmod +x tests/umount-test.sh])
 
 

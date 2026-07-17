@@ -1,7 +1,12 @@
 #!/usr/bin/make -f
 
-DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH).
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+DEB_HOST_ARCH ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
 export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+
+ifeq ($(DEB_HOST_ARCH),armel)
+export DEB_LDFLAGS_MAINT_APPEND=-latomic
+endif
 
 %:
 	dh $@
