@@ -1,3 +1,9 @@
+squashfuse (0.5.2-0.2deepin1) unstable; urgency=medium
+
+  * Rebuild with LTO enabled (dpkg vendor feature optimize/lto).
+
+ -- tunaichao <tunaichao@uniontech.com>  Mon, 21 Sep 2026 16:14:31 +0800
+
 squashfuse (0.5.2-0.2) unstable; urgency=medium
 
   * Non-maintainer upload.
